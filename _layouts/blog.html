@@ -1,0 +1,33 @@
+---
+layout: default
+---
+{% include header.html %}
+
+    {% for post in site.posts %}
+        <article class="page-article">
+            <div class="article-header">
+                <h1 class="article-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+        
+                {% if post.image %}
+                    <img src="{{ post.image }}" alt="{{ post.title }}">
+                {% endif %}
+            </div>
+        
+            <div class="article-entry">
+                {% if post.content contains site.excerpt_separator %}
+                    {{ post.excerpt }}
+                {% else %}
+                    {{ post.content }}
+                {% endif %}
+            </div>
+            
+
+            {% if post.content contains site.excerpt_separator %}
+                <div class="article-footer">
+                    <a href="{{ post.url }}#read-more" class="read-more">بیشتر بخونید &larr;</a>
+                </div>
+            {% endif %}
+        </article>
+    {% endfor %}
+
+{% include footer.html %}

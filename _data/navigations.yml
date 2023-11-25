@@ -1,0 +1,29 @@
+top_menu:
+    -
+        title: صفحه اصلی
+        url: /
+    -
+        title: پروژه ها
+        url: /projects/
+    -
+        title: تماس و درباره
+        url: /akam0098ir/
+    -
+        title: صفحه ۴۰۴
+        url: /sitemap/
+
+
+
+footer:
+    -
+        title: Instagram
+        icon: fa fa-instagram
+        url: /fefef/
+    -
+        title: Github
+        icon: fa fa-github
+        url: /fefef
+    -
+        title: Twitter
+        icon: fa fa-twitter
+        url: /fefef

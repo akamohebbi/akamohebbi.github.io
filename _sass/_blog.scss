@@ -1,0 +1,102 @@
+body {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+.page-wrapper {
+    margin: 128px 128px 128px 64px;
+}
+
+.site-title {
+    font-weight: bold;
+    font-size: 60px;
+
+    small {
+        font-weight: normal;
+        font-size: 60%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page-entry {
+    margin-top: 128px;
+}
+
+
+
+
+.page-article {
+    margin-top: 128px;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// footer
+.page-footer {
+    margin-top: 128px;
+}
+
+
+
+
+
+
+
+
+
+a.read-more {
+    font-size: 18px;
+    text-decoration: none;
+
+    &:hover {
+        color: rgba($color: #000000, $alpha: 0.64);
+    }
+}
+
+
+
+
+
+
+
+.site-copyrights {
+    color: rgba($color: #000000, $alpha: 0.64);
+    p {
+        margin: 0;
+    }
+
+    a {
+        color: black;
+    }
+}

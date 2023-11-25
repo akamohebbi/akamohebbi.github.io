@@ -1,0 +1,39 @@
+---
+layout: default
+---
+{% include header.html %}
+
+<article class="page-article type-{{ page.type }}">
+    <div class="article-header">
+        <h1 class="article-title">{{ page.title }}</h1>
+        {% if page.type == "post" %}
+            <div class="article-meta">
+                متای نوشته من شامل تاریخ - دسته بندی و نظرات
+            </div>
+        {% endif %}
+
+        {% if page.image %}
+            <img src="{{ page.image }}" alt="{{ site.title }}">
+        {% endif %}
+    </div>
+
+    <div class="article-entry">
+        {{ content }}
+    </div>
+    
+    <div class="article-footer">
+        <div class="article-tags">
+            {% for tag in page.tags %}
+                <a href="#!">{{ tag }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</article>
+
+{% if page.comments %}
+    <div class="page-comments">
+        {% include disqus.html %}
+    </div>
+{% endif %}
+
+{% include footer.html %}

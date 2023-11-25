@@ -1,0 +1,147 @@
+$h1_font_size: 36px;
+$h2_font_size: 30px;
+$h3_font_size: 24px;
+$h4_font_size: 20px;
+$h5_font_size: 18px;
+$h6_font_size: 16px;
+
+
+
+.article-entry,
+.page-comments {
+    width: 920px;
+    max-width: 100%;
+}
+
+
+.page-comments {
+    margin-top: 128px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.article-header {
+    img {
+        max-width: 100%;
+        margin-top: 16px;
+    }    
+}
+
+.article-title {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+
+
+
+
+// ---------------------------- meta
+.article-meta {
+    color: rgba($color: #000000, $alpha: 0.64);
+}
+
+
+
+
+
+.article-entry {
+    margin-top: 32px;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    p {
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+
+    h1 {
+        font-size: $h1_font_size;
+        margin: 0;
+        margin-top: $h1_font_size*1.5;
+    }
+    h2 {
+        font-size: $h2_font_size;
+        margin: 0;
+        margin-top: $h2_font_size*1.5;
+    }
+    h3 {
+        font-size: $h3_font_size;
+        margin: 0;
+        margin-top: $h3_font_size*1.5;
+    }
+    h4 {
+        font-size: $h4_font_size;
+        margin: 0;
+        margin-top: $h4_font_size*1.5;
+    }
+    h5 {
+        font-size: $h5_font_size;
+        margin: 0;
+        margin-top: $h5_font_size*1.5;
+    }
+    h6 {
+        font-size: $h6_font_size;
+        margin: 0;
+        margin-top: $h6_font_size*1.5;
+    }
+}
+
+.article-footer {
+    margin-top: 32px;
+}
+
+
+
+
+
+
+
+
+
+// ---------------------- tags
+.article-tags {
+    color: #0064e0;
+
+    a {
+        &::before {
+            content: '#';
+            margin-right: 4px;
+        }
+
+        &:first-child::before {
+            margin-right: 0;
+        }
+
+    }
+}

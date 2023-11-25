@@ -1,0 +1,28 @@
+<div class="page-wrapper">
+    <header class="page-header">
+        <div class="site-into">
+            <h2 class="site-title">
+                {{ site.title }}
+                <small>{{ site.description }}</small>
+            </h2>
+        </div>
+
+        <nav class="top-nav">
+            {% if site.top_nav %}
+                {% if site.data.navigations[site.top_nav] %}
+                    <div class="w3-bar">
+                        {% for item in site.data.navigations[site.top_nav] %}
+                            <a href="{{ item.url }}" class="{% if item.url == page.url %}active {% endif %}w3-bar-item w3-button w3-hover-none">
+                                {% if item.icon %}
+                                    <i class="{{ item.icon }}"></i>
+                                {% endif %}
+                                <span>{{ item.title }}</span>
+                            </a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endif %}
+        </nav>
+    </header>
+
+    <div class="page-entry">

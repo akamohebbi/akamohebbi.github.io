@@ -1,0 +1,31 @@
+.page-404 {
+
+    h2 {
+        font-size: 256px;
+        font-weight: bold;
+        margin: 0;
+        line-height: 1.2;
+
+        small {
+            font-size: 50%;
+        }
+    }
+
+    p {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    form {
+        margin-top: 32px;
+
+        input {
+            padding: 8px 16px;
+        }
+
+        input[type="text"] {
+            min-width: 512px;
+        }
+    }
+
+}

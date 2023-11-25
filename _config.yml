@@ -1,0 +1,61 @@
+theme_color: black
+
+
+language: fa_IR
+direction: rtl
+
+title: آکام محبی
+description: وبلاگ شخصی آکام، دست نوشته های یک گیک
+title_sep: '-'
+
+top_nav: top_menu
+bottom_nav: footer
+
+
+
+permalink: /:year/:month/:slug/
+
+excerpt_separator: '<div id="read-more"></div>'
+
+collections:
+    assets:
+        output: true
+        permalink: /:path
+    pages:
+        output: true
+        permalink: /:slug/
+
+defaults:
+    -
+        scope:
+            path: ""
+        values:
+            seo_description_max_words: 200
+            lang: "fa_IR"
+    -
+        scope:
+            path: ""
+            type: "pages"
+        values:
+            layout: single
+            type: page
+    -
+        scope:
+            path: ""
+            type: "posts"
+        values:
+            layout: single
+            type: post
+            categories:
+                - دسته بندی نشده
+
+plugins:
+    - jekyll-seo-tag
+
+
+
+
+
+exclude:
+    - LICENSE
+    - README.md
