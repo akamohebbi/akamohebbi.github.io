@@ -1,12 +1,13 @@
 </div>
 
 <footer class="page-footer">
-    <nav class="bottom-nav">
-        {% if site.top_nav %}
+
+    {% if site.top_nav %}
+        <nav class="bottom-nav">
             {% if site.data.navigations[site.bottom_nav] %}
                 <div class="w3-bar">
                     {% for item in site.data.navigations[site.bottom_nav] %}
-                        <a href="{{ item.url }}" class="{% if item.url == page.url %}active {% endif %}w3-bar-item w3-button w3-hover-none">
+                        <a href="{{ item.url }}" class="{% if item.url == page.url %}active {% endif %}w3-bar-item w3-button w3-hover-none" target="{{ item.target | default: '_blank' }}">
                             {% if item.icon %}
                                 <i class="{{ item.icon }}"></i>
                                 <span class="w3-hide">{{ item.title }}</span>
@@ -15,12 +16,11 @@
                     {% endfor %}
                 </div>
             {% endif %}
-        {% endif %}
-    </nav>
+        </nav>
+    {% endif %}
 
     <div class="site-copyrights">
-        <p>تمام حقوق مادی و معنوی این وبسایت برای <a href="/">{{ site.title }}</a> محفوظ است</p>
-        <p>توسعه داده شده توسط <a href="https://akam0098ir.github.io">آکام</a></p>
+        <p>وبلاگ آکام یک پروژه متن باز بوده و تحت مجوز <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0 DEED</a> برای عموم در دسترس است <span class="copyleft">&copy;</span> 1402</p>
     </div>
 </footer> 
 </div>

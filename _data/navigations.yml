@@ -14,16 +14,22 @@ top_menu:
 
 
 
+# bottom nav
+#   `title` optional
+#   `icon` required
+#       general class name for Font Awesome icons v4.7.0
+#       example `fa fa-instagram`
+#   `url` required
+#   `target` optional
+#       `_self` to open link in current tab
+#       `_blank` (default) to open link in new tab
+
 footer:
     -
         title: Instagram
         icon: fa fa-instagram
-        url: /fefef/
+        url: https://instagram.com/akam0098ir
     -
         title: Github
         icon: fa fa-github
-        url: /fefef
-    -
-        title: Twitter
-        icon: fa fa-twitter
-        url: /fefef
+        url: https://github.com/akam0098ir
