@@ -1,6 +1,17 @@
+# top nav
+#   `title` required
+#   `icon` optional
+#       general class name for Font Awesome icons v4.7.0
+#       example `fa fa-instagram`
+#   `url` required
+#   `target` optional
+#       `_self` (default) to open link in current tab
+#       `_blank` to open link in new tab
+
 top_menu:
     -
         title: صفحه اصلی
+        icon: fa fa-home
         url: /
     -
         title: پروژه ها
@@ -8,10 +19,6 @@ top_menu:
     -
         title: تماس و درباره
         url: /akam0098ir/
-    -
-        title: صفحه ۴۰۴
-        url: /sitemap/
-
 
 
 # bottom nav
@@ -19,6 +26,7 @@ top_menu:
 #   `icon` required
 #       general class name for Font Awesome icons v4.7.0
 #       example `fa fa-instagram`
+#       default is `fa fa-external-link-square`
 #   `url` required
 #   `target` optional
 #       `_self` to open link in current tab
@@ -27,7 +35,6 @@ top_menu:
 footer:
     -
         title: Instagram
-        icon: fa fa-instagram
         url: https://instagram.com/akam0098ir
     -
         title: Github

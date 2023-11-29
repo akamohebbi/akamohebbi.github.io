@@ -1,18 +1,18 @@
 <div class="page-wrapper">
-    <header class="page-header">
+    <header class="page-header w3-display-container">
         <div class="site-into">
             <h2 class="site-title">
-                {{ site.title }}
+                <a href="/">{{ site.title }}</a>
                 <small>{{ site.description }}</small>
             </h2>
         </div>
 
-        <nav class="top-nav">
+        <nav class="top-nav w3-hide-small">
             {% if site.top_nav %}
                 {% if site.data.navigations[site.top_nav] %}
                     <div class="w3-bar">
                         {% for item in site.data.navigations[site.top_nav] %}
-                            <a href="{{ item.url }}" class="{% if item.url == page.url %}active {% endif %}w3-bar-item w3-button w3-hover-none">
+                            <a href="{{ item.url }}" target="{{ item.target | default: '_self' }}" class="{% if item.url == page.url %}active {% endif %}w3-bar-item w3-button w3-hover-none">
                                 {% if item.icon %}
                                     <i class="{{ item.icon }}"></i>
                                 {% endif %}
@@ -23,6 +23,27 @@
                 {% endif %}
             {% endif %}
         </nav>
+
+        <button class="w3-button w3-hide-medium w3-hide-large w3-hover-none w3-display-left" id="btn_display_mobile_nav">
+            <i class="fa fa-bars" id="btn_display_mobile_nav_icon"></i>
+        </button>
     </header>
+
+    <nav class="top-nav_mobile w3-hide-medium w3-hide-large" id="top_nav_mobile">
+        {% if site.top_nav %}
+            {% if site.data.navigations[site.top_nav] %}
+                <div class="w3-bar" id="top_nav_mobile_container">
+                    {% for item in site.data.navigations[site.top_nav] %}
+                        <a href="{{ item.url }}" target="{{ item.target | default: '_self' }}" class="{% if item.url == page.url %}active {% endif %}w3-bar-item w3-button w3-hover-none w3-mobile">
+                            {% if item.icon %}
+                                <i class="{{ item.icon }}"></i>
+                            {% endif %}
+                            <span>{{ item.title }}</span>
+                        </a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endif %}
+    </nav>
 
     <div class="page-entry">

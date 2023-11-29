@@ -9,11 +9,17 @@ $theme_color: black;
     color: white;
 }
 
+html,
+body {
+    margin: 0;
+}
+
 @import 
     "fonts",
     "global",
     "single",
     "navigations",
     "page_404",
+    "responsive",
     "blog"
 ;

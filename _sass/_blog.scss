@@ -19,6 +19,13 @@ h6 {
     font-weight: bold;
     font-size: 60px;
 
+    a {
+        text-decoration: none;
+        &:hover {
+            color: black;
+        }
+    }
+
     small {
         font-weight: normal;
         font-size: 60%;
