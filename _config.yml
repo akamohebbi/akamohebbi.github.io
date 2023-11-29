@@ -24,6 +24,9 @@ collections:
     pages:
         output: true
         permalink: /:slug/
+    projects:
+        output: true
+        permalink: /project/:slug/
 
 defaults:
     -
@@ -32,6 +35,13 @@ defaults:
         values:
             seo_description_max_words: 200
             lang: "fa_IR"
+    -
+        scope:
+            path: ""
+            type: "projects"
+        values:
+            layout: single
+            type: project
     -
         scope:
             path: ""
