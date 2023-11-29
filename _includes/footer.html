@@ -7,7 +7,7 @@
             {% if site.data.navigations[site.bottom_nav] %}
                 <div class="w3-bar">
                     {% for item in site.data.navigations[site.bottom_nav] %}
-                        <a href="{{ item.url }}" class="{% if item.url == page.url %}active {% endif %}w3-bar-item w3-button w3-hover-none" target="{{ item.target | default: '_blank' }}">
+                        <a href="{{ item.url }}" class="{% if item.url == page.url %}active {% endif %}w3-bar-item w3-button w3-hover-none{% if item.hide == 'desktop' %} w3-hide-medium w3-hide-large{% elsif item.hide == 'mobile' %} w3-hide-small{% endif %}" target="{{ item.target | default: '_blank' }}">
                             <i class="{{ item.icon | default: 'fa fa-external-link-square' }}"></i>
                             {% if item.title %}
                                 <span class="w3-hide">{{ item.title }}</span>

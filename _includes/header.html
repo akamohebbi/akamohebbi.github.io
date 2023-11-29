@@ -12,6 +12,8 @@
                 {% if site.data.navigations[site.top_nav] %}
                     <div class="w3-bar">
                         {% for item in site.data.navigations[site.top_nav] %}
+                            {% if item.hide == 'desktop' %}{% continue %}{% endif %}
+
                             <a href="{{ item.url }}" target="{{ item.target | default: '_self' }}" class="{% if item.url == page.url %}active {% endif %}w3-bar-item w3-button w3-hover-none">
                                 {% if item.icon %}
                                     <i class="{{ item.icon }}"></i>
@@ -32,13 +34,20 @@
     <nav class="top-nav_mobile w3-hide-medium w3-hide-large" id="top_nav_mobile">
         {% if site.top_nav %}
             {% if site.data.navigations[site.top_nav] %}
-                <div class="w3-bar" id="top_nav_mobile_container">
+
+                <div class="w3-bar animate__animated animate__fast" id="top_nav_mobile_container">
                     {% for item in site.data.navigations[site.top_nav] %}
+                        {% if item.hide == 'mobile' %}{% continue %}{% endif %}
+
                         <a href="{{ item.url }}" target="{{ item.target | default: '_self' }}" class="{% if item.url == page.url %}active {% endif %}w3-bar-item w3-button w3-hover-none w3-mobile">
-                            {% if item.icon %}
-                                <i class="{{ item.icon }}"></i>
-                            {% endif %}
-                            <span>{{ item.title }}</span>
+                            <span class="w3-right">
+                                <i class="{{ item.icon | default: 'fa fa-external-link-square' }} icon"></i>
+                                <span>{{ item.title }}</span>
+                            </span>
+
+                            <span class="w3-left left-icon">
+                                <i class="fa fa-chevron-left"></i>
+                            </span>
                         </a>
                     {% endfor %}
                 </div>

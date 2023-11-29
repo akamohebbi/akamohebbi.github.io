@@ -7,11 +7,13 @@
 #   `target` optional
 #       `_self` (default) to open link in current tab
 #       `_blank` to open link in new tab
+#   `hide` optional
+#       `desktop` hide an item in desktop nav
+#       `mobile` hide an item in mobile nav
 
 top_menu:
     -
         title: صفحه اصلی
-        icon: fa fa-home
         url: /
     -
         title: پروژه ها
@@ -31,6 +33,9 @@ top_menu:
 #   `target` optional
 #       `_self` to open link in current tab
 #       `_blank` (default) to open link in new tab
+#   `hide` optional
+#       `desktop` hide an item in desktop nav
+#       `mobile` hide an item in mobile nav
 
 footer:
     -
