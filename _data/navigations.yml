@@ -35,6 +35,7 @@ top_menu:
 footer:
     -
         title: Instagram
+        icon: fa fa-instagram
         url: https://instagram.com/akam0098ir
     -
         title: Github
