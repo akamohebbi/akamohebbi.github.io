@@ -1,0 +1,66 @@
+.page-tags {
+
+    #preloader {
+        i {
+            font-size: 64px;
+        }
+    }
+
+    #wrapper {
+        display: none;
+    }
+
+
+    .tags-list-container {
+        margin-bottom: 64px;
+
+        a {
+            margin-left: 8px;
+
+            &::before {
+                content: '#';
+            }
+
+            &:last-child {
+                margin-left: 0;
+            }
+
+            span {
+                color: #a1a1a1;
+            }
+        }
+    }
+
+    .tags-archive {
+        div {
+            margin-top: 64px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        h2 {
+            text-decoration: underline;
+            font-weight: bold;
+            color: #a1a1a1;
+            margin: 0;
+
+            &::before {
+                content: '#';
+            }
+        }
+    
+        a {
+            font-size: 18px;
+        }
+
+        span {
+            display: block;
+            color: #a1a1a1;
+            font-size: 14px;
+        }
+    }
+
+
+}

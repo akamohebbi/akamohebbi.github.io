@@ -14,6 +14,7 @@ $theme_color: {{ site.theme_color }};
 html,
 body {
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 @import 
@@ -22,6 +23,7 @@ body {
     "single",
     "navigations",
     "page_404",
+    "page_tags",
     "responsive",
     "blog"
 ;
