@@ -49,3 +49,20 @@ function hide_top_mobile_nav() {
         flag_is_mobile_nav_animation_finished = false;
     }, 800);
 }
+
+
+
+
+
+
+
+
+
+
+// ----------------------------------------------- task list
+var task_list_items = document.getElementsByClassName("task-list-item");
+
+for (var i = 0; i < task_list_items.length; i++) {
+    if (task_list_items[i].childNodes[0].checked)
+        task_list_items[i].style.textDecoration = "line-through";
+}

@@ -1,12 +1,312 @@
+// @akamohebbi
+
+
+
+
+
+/*
+    variables
+*/
+
+
+
+
+/*
+    classes
+*/
+
+@mixin bottom_border_on_hover {
+    &::after {
+        content: '';
+        display: block;
+        margin: auto;
+        height: 3px;
+        width: 0px;
+        background: transparent;
+        transition: width .5s ease, background-color .5s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+        background: black;
+    }
+}
+
+
+
+
+/*
+    w3css
+*/
+
 .w3-bar .w3-bar-item {
     float: right !important;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;700&family=IBM+Plex+Sans+Arabic:wght@400;700&family=Paytone+One&display=swap');
 
+
+/*
+    elements
+*/
+
+// typography
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+// links
 
 a {
+    color: $theme_color;
+    transition: all .3s;
+
     &:hover {
-        color: rgba($color: #000000, $alpha: 0.64);
+        color: #a1a1a1;
+        text-decoration: none;
+        transition: all .3s;
     }
 }
+
+
+
+/*
+    page wrapper
+*/
+
+.page-wrapper {
+    margin: 128px 128px 128px 64px;
+}
+
+
+
+/*
+    header
+*/
+
+// site title
+
+.site-title {
+    font-weight: bold;
+    font-size: 75px;
+    line-height: 1;
+    margin: 0;
+
+    a {
+        text-decoration: none;
+        &:hover {
+            color: $theme_color;
+        }
+    }
+
+    small {
+        font-weight: normal;
+        font-size: 50%;
+        opacity: .64;
+    }
+}
+
+
+
+/*
+    top nav
+*/
+
+.top-nav {
+    font-size: 25px;
+    margin-top: 16px;
+
+    a {
+        opacity: .64;
+        margin-left: 16px;
+        padding: 0 !important;
+
+        &:last-child {
+            margin-left: 0;
+        }
+
+        @include bottom_border_on_hover();
+
+        &.active {
+            border-color: rgba($color: #000000, $alpha: 1) !important;
+            opacity: 1;
+        }
+
+        &.active::after {
+            width: 100%;
+            background: black;
+        }
+    }
+}
+
+
+/*
+    page entry
+*/
+
+.page-entry {
+    margin-top: 128px;
+}
+
+
+
+/*
+    page article
+*/
+
+.page-article {
+    margin-top: 128px;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+
+
+/*
+    read more btn
+*/
+
+.read-more {
+    font-size: 18px;
+    text-decoration: none;
+
+    span {
+        transition: all .3s;
+    }
+
+
+    &:hover {
+        color: rgba($color: #000000, $alpha: 0.64);
+
+         span {
+        transition: all .3s;
+        margin-right: 5px;
+         }
+    }
+}
+
+
+
+/*
+    footer
+*/
+
+// footer
+.page-footer {
+    margin-top: 128px;
+}
+
+// footer menu
+
+.bottom-nav {
+    font-size: 45px;
+    margin-bottom: 8px;
+
+    a {
+        padding: 0 !important;
+        margin-left: 16px;
+
+        &:hover {
+            opacity: .64;
+        }
+    }
+}
+
+// copyright section
+
+.site-copyrights {
+    font-size: 15px;
+    opacity: .64;
+    p {
+        margin: 0;
+    }
+
+    a {
+        opacity: 1 !important;
+        font-weight: bold;
+        color: #000000;
+    }
+}
+
+.copyleft {
+    display:inline-block;
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

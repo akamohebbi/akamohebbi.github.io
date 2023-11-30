@@ -62,6 +62,10 @@
         font-size: 50px !important;
         margin: 0;
 
+        a {
+        color: white !important;
+        }
+
         a:hover {
             color: white !important;
             opacity: 0.7 !important;
@@ -70,6 +74,7 @@
         small {
             display: block;
             font-size: 32% !important;
+            margin-top: 16px;
             color: rgba($color: white, $alpha: 0.64);
         }
     }
@@ -101,4 +106,36 @@
     .page-footer {
         margin: 64px 16px !important;
     }
+
+
+
+
+    .page-404 {
+
+        text-align: center;
+       
+        h1 {
+            font-size: 190px;
+        }
+
+        .content {
+            margin-top: -64px;
+        }
+
+        h2 {
+            font-size: 50px;
+        }
+
+         p {
+            margin: 16px auto;
+            font-size: 18px;
+         }
+
+         input[type="text"] {
+            width: 180px;
+         }
+       
+    }
+
+
 }

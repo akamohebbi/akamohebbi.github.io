@@ -1,4 +1,5 @@
 # top nav
+# use top nav for internal links to your own blog pages
 #   `title` required
 #   `icon` optional
 #       general class name for Font Awesome icons v4.7.0
@@ -24,6 +25,7 @@ top_menu:
 
 
 # bottom nav
+# use bottom nav for social links with icons and not internal links to your own blog
 #   `title` optional
 #   `icon` required
 #       general class name for Font Awesome icons v4.7.0

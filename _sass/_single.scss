@@ -52,6 +52,14 @@ $h6_font_size: 16px;
     font-size: 50px;
     font-weight: bold;
     margin: 0;
+
+    a {
+        color: black;
+
+        &:hover {
+            opacity: .64;
+        }
+    }
 }
 
 
@@ -115,6 +123,19 @@ $h6_font_size: 16px;
         margin: 0;
         margin-top: $h6_font_size*1.5;
     }
+
+
+
+    ul {
+        &.task-list {
+            list-style: none;
+
+            input {
+                margin-left: 8px;
+            }
+        }
+    }
+
 }
 
 .article-footer {

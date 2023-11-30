@@ -1,20 +1,3 @@
-.top-nav {
-    font-size: 25px;
-
-    a {
-        padding: 0 !important;
-        margin-left: 16px;
-        border-bottom: 4px solid white !important;
-
-        &:hover {
-            border-color: rgba($color: #000000, $alpha: 0.64) !important;
-        }
-
-        &.active {
-            border-color: rgba($color: #000000, $alpha: 1) !important;
-        }
-    }
-}
 
 
 
@@ -23,23 +6,8 @@
 
 
 
-.bottom-nav {
-    font-size: 40px;
-    margin-bottom: 16px;
 
-    a {
-        padding: 0 !important;
-        margin-left: 16px;
 
-        &:hover {
-            color: rgba($color: #000000, $alpha: 0.64) !important;
-        }
-
-        &.active {
-            border-bottom: 4px solid black;
-        }
-    }
-}
 
 
 
