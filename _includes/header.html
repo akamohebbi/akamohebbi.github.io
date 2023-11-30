@@ -27,7 +27,11 @@
         </nav>
 
         <button class="w3-button w3-hide-medium w3-hide-large w3-hover-none w3-display-left" id="btn_display_mobile_nav">
-            <i class="fa fa-bars" id="btn_display_mobile_nav_icon"></i>
+            <div id="nav-icon4">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
         </button>
     </header>
 
@@ -39,15 +43,17 @@
                     {% for item in site.data.navigations[site.top_nav] %}
                         {% if item.hide == 'mobile' %}{% continue %}{% endif %}
 
-                        <a href="{{ item.url }}" target="{{ item.target | default: '_self' }}" class="{% if item.url == page.url %}active {% endif %}w3-bar-item w3-button w3-hover-none w3-mobile">
+                        <a href="{% if page.url == item.url %}#!{% else %}{{ item.url }}{% endif %}" target="{{ item.target | default: '_self' }}" class="{% if item.url == page.url %}active {% endif %}w3-bar-item w3-button w3-hover-none w3-mobile">
                             <span class="w3-right">
                                 <i class="{{ item.icon | default: 'fa fa-external-link-square' }} icon"></i>
                                 <span>{{ item.title }}</span>
                             </span>
 
-                            <span class="w3-left left-icon">
-                                <i class="fa fa-chevron-left"></i>
-                            </span>
+                            {% if page.url != item.url %}
+                                <span class="w3-left left-icon">
+                                    <i class="fa fa-chevron-left"></i>
+                                </span>
+                            {% endif %}
                         </a>
                     {% endfor %}
                 </div>

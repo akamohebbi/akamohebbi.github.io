@@ -13,9 +13,16 @@
     border: 4px solid white;
 
     a {
-        background-color: black;
+        background-color: $theme_color;
         border-bottom: 4px solid white;
         padding: 16px;
+
+        &.active,
+        &:hover {
+            background-color: black !important;
+            opacity: 0.92;
+            color: rgba(white, 0.5) !important;
+        }
 
         &:last-child {
             border-bottom: none;
@@ -23,6 +30,10 @@
 
         i.icon {
             margin-left: 8px;
+        }
+
+        &.active {
+
         }
     }
 
@@ -42,7 +53,7 @@
     // page header
 
     .page-header {
-        background-color: black;
+        background-color: $theme_color;
         padding: 32px 16px;
         color: white;
     }
@@ -50,6 +61,11 @@
     .site-title {
         font-size: 50px !important;
         margin: 0;
+
+        a:hover {
+            color: white !important;
+            opacity: 0.7 !important;
+        }
 
         small {
             display: block;

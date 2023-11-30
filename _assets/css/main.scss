@@ -2,7 +2,7 @@
 ---
 @charset "UTF-8";
 
-$theme_color: black;
+$theme_color: {{ site.theme_color }};
 
 ::selection {
     background-color: $theme_color;

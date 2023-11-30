@@ -1,6 +1,10 @@
 theme_color: black
 
 
+top_nav_mobile_enter_animation: animate__zoomInUp
+top_nav_mobile_exit_animation: animate__zoomOutDown
+
+
 language: fa_IR
 direction: rtl
 
