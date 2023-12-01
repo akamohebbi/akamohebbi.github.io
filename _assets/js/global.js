@@ -63,6 +63,8 @@ function hide_top_mobile_nav() {
 var task_list_items = document.getElementsByClassName("task-list-item");
 
 for (var i = 0; i < task_list_items.length; i++) {
-    if (task_list_items[i].childNodes[0].checked)
+    if (task_list_items[i].childNodes[0].checked) {
         task_list_items[i].style.textDecoration = "line-through";
+        task_list_items[i].style.color = "#a1a1a1";
+    }
 }
