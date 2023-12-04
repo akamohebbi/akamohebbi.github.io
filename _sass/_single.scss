@@ -21,6 +21,24 @@ $h6_font_size: 16px;
 
 
 
+.page-thumbnail {
+    margin: 0;
+    margin-top: 16px;
+
+    img {
+        max-width: 100%;
+    }
+
+    figcaption {
+        text-align: center;
+        margin-top: 4px;
+        color: #a1a1a1;
+        font-style: italic;
+        font-size: 14px;
+    }
+}
+
+
 
 
 
@@ -42,10 +60,6 @@ $h6_font_size: 16px;
 
 
 .article-header {
-    img {
-        max-width: 100%;
-        margin-top: 16px;
-    }    
 }
 
 .article-title {
@@ -164,5 +178,49 @@ $h6_font_size: 16px;
             margin-right: 0;
         }
 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    support box
+*/
+
+.page-support {
+    margin-top: 128px;
+    font-size: 18px;
+
+    h2 {
+        line-height: 1;
+        margin: 0;
+        font-size: 128px;
+        color: #a1a1a1;
+        font-weight: bold;
+        opacity: .16;
+    }
+
+    p {
+        margin: 0;
+        margin-top: -32px;
+        width: 720px;
+        max-width: 100%;
+    }
+
+    nav {
+        margin-top: 8px;
+        z-index: 999;
     }
 }

@@ -13,7 +13,12 @@ layout: default
         {% endif %}
 
         {% if page.image %}
-            <img src="{{ page.image }}" alt="{{ site.title }}">
+            <figure class="page-thumbnail">
+                <img src="{{ page.image }}" alt="{% if page.image_caption %}{{ page.image_caption | strip_html }}{% else %}{{ page.title }}{% endif %}">
+                {% if page.image_caption %}
+                    <figcaption>{{ page.image_caption }}</figcaption>
+                {% endif %}
+            </figure>
         {% endif %}
     </div>
 
@@ -29,6 +34,16 @@ layout: default
         </div>
     </div>
 </article>
+
+{% if page.support == true %}
+    <div class="page-support">
+        <h2>حمایت</h2>
+        <p>با مراجعه به برگه حمایت با روش های مختلفی که می تونید از پروژه وبلاگحمایت کنید آشنا بشد. حمایت های شما واقعا خوشحال کننده و امیدی مضاعف برای ادامه راه خواهد بود.</p>
+        <nav class="w3-bar">
+            <a href="/support/">صفحه حمایت</a>
+        </nav>
+    </div>
+{% endif %}
 
 {% if page.comments %}
     <div class="page-comments">
