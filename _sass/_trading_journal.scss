@@ -1,0 +1,15 @@
+#_trading_journal {
+    margin-top: 64px;
+    
+    li {
+        &.date {
+            list-style: none;
+            margin-top: 32px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+} // -------------------------------- end

@@ -1,6 +1,5 @@
 ---
 slug: hello-world
-comments: true
 date: 2023-11-16 14:18:01 +0330
 title: وبلاگ آکام به جهان سلام می کنه، سلام جهان!
 categories:

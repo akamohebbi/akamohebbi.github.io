@@ -30,7 +30,10 @@ collections:
         permalink: /:slug/
     projects:
         output: true
-        permalink: /project/:slug/
+        permalink: /projects/:slug/
+    trading_journal:
+        output: true
+        permalink: /trading-journal/:year/:month/:day/
 
 defaults:
     -
@@ -61,8 +64,14 @@ defaults:
         values:
             layout: single
             type: post
-            categories:
-                - دسته بندی نشده
+            comments: true
+    -
+        scope:
+            path: ""
+            type: "trading_journal"
+        values:
+            layout: single
+            type: item
 
 plugins:
     - jekyll-seo-tag

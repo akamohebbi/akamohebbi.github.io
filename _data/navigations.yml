@@ -1,3 +1,5 @@
+# font awesome icons v4.7.0 https://fontawesome.com/v4/icons/
+
 # top nav
 # use top nav for internal links to your own blog pages
 #   `title` required
@@ -16,6 +18,9 @@ top_menu:
     -
         title: صفحه اصلی
         url: /
+    -
+        title: ژورنال ترید
+        url: /trading-journal/
     -
         title: پروژه ها
         url: /projects/

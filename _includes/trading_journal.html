@@ -1,0 +1,14 @@
+<div id="_trading_journal">
+
+    <ul>
+        {% for post in site.trading_journal %}
+            {% assign currentdate = post.date | date: "%B %Y" %}
+            {% if currentdate != date %}
+                <li id="y{{currentdate}}" class="date">{{ currentdate }}</li>
+                {% assign date = currentdate %} 
+            {% endif %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+</div>

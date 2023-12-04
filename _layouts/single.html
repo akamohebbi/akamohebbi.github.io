@@ -7,9 +7,19 @@ layout: default
     <div class="article-header">
         <h1 class="article-title">{{ page.title }}</h1>
         {% if page.type == "post" %}
-            <!-- <div class="article-meta">
-                متای نوشته من شامل تاریخ - دسته بندی و نظرات
-            </div> -->
+            <div class="article-meta">
+                <!-- {% assign date = site.data.strings.days[] %} -->
+
+                {% if page.categories %}
+                    <span>دسته بندی شده در</span>
+                    {% for category in page.categories %}
+                        <a href="#!">{{ category }}</a>
+                    {% endfor %}
+                {% endif %}
+                    
+                
+                <!-- comments -->
+            </div>
         {% endif %}
 
         {% if page.image %}
