@@ -19,9 +19,6 @@ top_menu:
         title: صفحه اصلی
         url: /
     -
-        title: ژورنال ترید
-        url: /trading-journal/
-    -
         title: پروژه ها
         url: /projects/
     -

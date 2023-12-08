@@ -1,55 +1,57 @@
+url: https://akam0098ir.github.io
+base_url: '/'
+
+
 theme_color: "#16A085"
-
-
-top_nav_mobile_enter_animation: animate__zoomInUp
-top_nav_mobile_exit_animation: animate__zoomOutDown
-
 
 language: fa_IR
 direction: rtl
 
 title: آکام محبی
 description: وبلاگ شخصی آکام، دست نوشته های یک گیک
+
 title_sep: '-'
 
+
+# first define a menu in `_date/navigations.yml`
 top_nav: top_menu
 bottom_nav: footer
 
+# find animations from https://animate.style/
+top_nav_mobile_enter_animation: animate__zoomInUp
+top_nav_mobile_exit_animation: animate__zoomOutDown
 
 
 permalink: /:year/:month/:slug/
 
 excerpt_separator: '<div id="read-more"></div>'
 
+
+
+
 collections:
+    # -------------------------------- static files
     assets:
         output: true
         permalink: /:path
+    # -------------------------------- custom pages
     pages:
         output: true
         permalink: /:slug/
-    projects:
-        output: true
-        permalink: /projects/:slug/
-    trading_journal:
-        output: true
-        permalink: /trading-journal/:year/:month/:day/
+
+
+
 
 defaults:
+    # -------------------------------- global
     -
         scope:
             path: ""
         values:
             seo_description_max_words: 200
             lang: "fa_IR"
-    -
-        scope:
-            path: ""
-            type: "projects"
-        values:
-            layout: single
-            type: project
-            support: true
+
+    # -------------------------------- pages
     -
         scope:
             path: ""
@@ -57,6 +59,9 @@ defaults:
         values:
             layout: single
             type: page
+            comments: false
+
+    # -------------------------------- posts
     -
         scope:
             path: ""
@@ -64,18 +69,13 @@ defaults:
         values:
             layout: single
             type: post
-            comments: true
-    -
-        scope:
-            path: ""
-            type: "trading_journal"
-        values:
-            layout: single
-            type: item
+            comments: false
+
+
+
 
 plugins:
     - jekyll-seo-tag
-
 
 
 

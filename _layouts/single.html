@@ -7,18 +7,28 @@ layout: default
     <div class="article-header">
         <h1 class="article-title">{{ page.title }}</h1>
         {% if page.type == "post" %}
-            <div class="article-meta">
-                <!-- {% assign date = site.data.strings.days[] %} -->
 
-                {% if page.categories %}
-                    <span>دسته بندی شده در</span>
-                    {% for category in page.categories %}
-                        <a href="#!">{{ category }}</a>
-                    {% endfor %}
-                {% endif %}
-                    
+            {% assign day = page.date | date: '%w' | plus: 0 %}
+            {% assign day_n = site.data.strings.days[day] %}
+
+            {% assign month = page.date | date: '%m' | plus: 0 %}
+            {% assign month_n = site.data.strings.months[month] %}
+
+            {% assign year = page.date | date: '%Y' %}  
+            {% assign md = page.date | date: '%e' %}
+            
+
+            <div class="article-meta">
+                <span class="date meta">{{ day_n | append: '، ' | append: md | append: ' ' | append: month_n | append: ' ' | append: year }}</span>
                 
-                <!-- comments -->
+                {% if page.categories %}
+                    <span class="meta categories">
+                        <span>دسته بندی شده در</span>
+                        {% for category in page.categories %}
+                            <a href="#!">{{ category }}</a>
+                        {% endfor %}
+                    </span>
+                {% endif %}
             </div>
         {% endif %}
 

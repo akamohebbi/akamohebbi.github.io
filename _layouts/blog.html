@@ -7,7 +7,29 @@ layout: default
         <article class="page-article">
             <div class="article-header">
                 <h1 class="article-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-        
+
+                {% assign day = post.date | date: '%w' | plus: 0 %}
+                {% assign day_n = site.data.strings.days[day] %}
+    
+                {% assign month = post.date | date: '%m' | plus: 0 %}
+                {% assign month_n = site.data.strings.months[month] %}
+    
+                {% assign year = post.date | date: '%Y' %}  
+                {% assign md = post.date | date: '%e' %}
+                
+    
+                <div class="article-meta">
+                    <span class="date meta">{{ day_n | append: '، ' | append: md | append: ' ' | append: month_n | append: ' ' | append: year }}</span>
+                    
+                    {% if post.categories %}
+                        <span class="meta categories">
+                            <span>دسته بندی شده در</span>
+                            {% for category in post.categories %}
+                                <a href="#!">{{ category }}</a>
+                            {% endfor %}
+                        </span>
+                    {% endif %}
+                </div>
                 {% if post.image %}
                     <img src="{{ post.image }}" alt="{{ post.title }}">
                 {% endif %}

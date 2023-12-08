@@ -1,5 +1,5 @@
 ---
-slug: akam0098ir
+slug: project-akam0098ir
 title: پروژه وبلاگ آکام
 ---
 پروژه وبلاگ آکام و

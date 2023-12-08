@@ -83,7 +83,23 @@ $h6_font_size: 16px;
 
 // ---------------------------- meta
 .article-meta {
-    color: rgba($color: #000000, $alpha: 0.64);
+    opacity: .5;
+    
+    .meta {
+        &::after {
+            content: '•';
+            margin: 0 8px;
+        }
+
+        &:last-child::after {
+            content: none;
+            margin: 0;
+        }
+    }
+
+    a {
+        color: black;
+    }
 }
 
 
