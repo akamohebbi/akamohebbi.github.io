@@ -6,37 +6,44 @@ title: آرشیو تگ ها
 {% include header.html %}
 <div class="page-tags">
 
-    <div class="w3-center animate__animated animate__fast" id="preloader">
-        <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
-        <p>در حال بارگذاری<br>لطفا صبر کنید!</p>
+
+
+    <div class="tags-list-container" id="tags-list-container">
+        {% for tag in site.tags %}
+            <a href="/tags/#{{ tag[0] }}" style="font-size: {{ tag[1].size | plus: 12 }}px;">{{ tag[0] }}<span>({{ tag[1].size }})</span></a>
+        {% endfor %}
     </div>
 
-    <div class="animate__animated animate__fast" id="wrapper">
+    <div class="tags-archive">
+        {% for tag in site.tags %}
+            <div class="tag-container" id="{{ tag[0] }}">
+                <h2>{{ tag[0] }}</h2>
+                <ul>
+                    {% for post in tag[1] %}
+                        {% assign day = post.date | date: '%w' | plus: 0 %}
+                        {% assign day_n = site.data.strings.days[day] %}
+            
+                        {% assign month = post.date | date: '%m' | plus: 0 %}
+                        {% assign month_n = site.data.strings.months[month] %}
+            
+                        {% assign year = post.date | date: '%Y' %}  
+                        {% assign md = post.date | date: '%e' %}
 
-        <div class="tags-list-container" id="tags-list-container">
-            {% for tag in site.tags %}
-                <a href="/tags/#{{ tag[0] }}" style="font-size: {{ tag[1].size | plus: 12 }}px;">{{ tag[0] }}<span>({{ tag[1].size }})</span></a>
-            {% endfor %}
-        </div>
-
-        <div class="tags-archive">
-            {% for tag in site.tags %}
-                <div class="tag-container" id="{{ tag[0] }}">
-                    <h2>{{ tag[0] }}</h2>
-                    <ul>
-                        {% for post in tag[1] %}
-                            <li><a href="{{ post.url }}">{{ post.title }}</a><span>{{ post.date }}</span></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            {% endfor %}
-        </div>
-
+                        <li>
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                            <span>{{ day_n | append: '، ' | append: md | append: ' ' | append: month_n | append: ' ' | append: year }}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
     </div>
 
     <script>
         var url = new URL(window.location.href);
         var tag = url.searchParams.get("tag");
+
+        document.title = "همه پست ها برای تگ " + tag + " {{ site.title_sep }} " + "{{ site.title }}";
 
         var tags = [{% for tag in site.tags %}"{{ tag[0] }}",{% endfor %}];
 
@@ -51,18 +58,8 @@ title: آرشیو تگ ها
                 if (tag_containers[i].id != tag) tag_containers[i].style.display = "none";
             }
         }
+    </script>
 
-        setTimeout(() => {
-            document.getElementById("preloader").classList.toggle("animate__bounceOut");
-            
-            setTimeout(() => {
-                document.getElementById("preloader").style.display = "none";
-                document.getElementById("wrapper").style.display = "block";                    
-                document.getElementById("wrapper").classList.toggle("animate__fadeIn");
-            }, 800);
-        }, 500);
-
-</script>
 
 
 </div>
