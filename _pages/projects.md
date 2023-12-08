@@ -2,6 +2,8 @@
 slug: projects
 title: پروژه هایی فقط برای تفریح
 support: true
+image: /img/josiah-gardner-Tb9FJ4Znz-U-unsplash.jpg
+image_caption: Photo by <a href="https://unsplash.com/@josiahgardner?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Josiah Gardner</a> on <a href="https://unsplash.com/photos/person-diving-from-cliff-to-body-of-water-during-sunset-Tb9FJ4Znz-U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 ---
 این برگه شامل لیستی از پروژه هایی است که من به صورت تفریحی روش کار می کنم. پروژه های قابل ذکری که عموما به صورت متن باز منتشر شده و از طریق صفحه من در گیتهاب قابل دسترسی است.
 
