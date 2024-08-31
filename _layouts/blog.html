@@ -1,0 +1,38 @@
+---
+layout: base
+---
+{% include templates/header.html %}
+
+    {% for post in site.posts %}
+        <article class="page-article">
+            <div class="article-header">
+                {% if post.thumbnail %}
+                    <figure class="article-thumbnail">
+                        <a href="{{ post.url }}">
+                            <img src="{{ post.thumbnail }}" alt="{{ post.thumbnail_caption |default: post.title }} - {{ site.title }}" title="{{ post.thumbnail_caption |default: post.title }}">
+                        </a>
+                        {% if post.thumbnail_caption %}
+                            <figcaption><a href="{{ post.thumbnail_link |default: '#!' }}">{{ post.thumbnail_caption }}</a></figcaption>
+                        {% endif %}                                
+                    </figure>
+                {% endif %}
+                <h1 class="article-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+            </div>
+
+            <div class="article-content">
+                {% if post.content contains site.excerpt_separator %}
+                    {{ post.excerpt }}
+                {% else %}
+                    {{ post.content }}
+                {% endif %}
+            </div>
+
+            {% if post.content contains site.excerpt_separator %}
+                <div class="article-footer">
+                    <a href="{{ post.url }}#read-more">بیشتر بخونید &larr;</a>
+                </div>
+            {% endif %}
+        </article>
+    {% endfor %}
+
+{% include templates/footer.html %}

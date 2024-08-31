@@ -1,0 +1,57 @@
+---
+layout: base
+---
+{% include templates/header.html %}
+
+    <article class="page-article">
+        <div class="article-header">
+            {% if page.thumbnail %}
+                <figure class="article-thumbnail">
+                    <img src="{{ page.thumbnail }}" alt="{{ page.thumbnail_caption |default: page.title }} - {{ site.title }}" title="{{ page.thumbnail_caption |default: page.title }}">
+                    {% if page.thumbnail_caption %}
+                        <figcaption><a href="{{ page.thumbnail_link |default: '#!' }}">{{ page.thumbnail_caption }}</a></figcaption>
+                    {% endif %}                                
+                </figure>
+            {% endif %}
+            <h1 class="article-title">{{ page.title }}</h1>
+        </div>
+
+        <div class="article-content">
+            {{ page.content }}
+        </div>
+
+        {% if page.type == "post" %}
+            <div class="article-footer">
+                <div class="article-tags">
+                    {% for tag in page.tags %}
+                        <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </article>
+
+
+    <!-- 
+        next, prev posts
+        comments
+        random posts -> with js not jekyll
+    -->
+
+
+    <div class="comments">
+        {% include disqus.html %}
+    </div>
+
+
+    {% if page.type == "post" %}
+        <div class="random_posts">
+            <h2>شاید این پست هام به دردتون بخوره!</h2>
+            <script>randomPosts(3)</script>
+            <ul id="randomPostsContainer">
+                <li style="display: none;" id="randomPostsFirst"></li>
+            </ul>
+        </div>
+    {% endif %}
+
+{% include templates/footer.html %}

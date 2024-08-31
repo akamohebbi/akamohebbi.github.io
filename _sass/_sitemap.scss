@@ -1,0 +1,30 @@
+#page_sitemap {
+
+    .sitemap_section {
+        h2 {
+            margin: 0;
+            font-size: 2.56em;
+        }
+    }
+
+    
+
+    #sitemap_posts {
+        margin-top: 128px;
+
+        .category {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+    }
+}
+
+@media (max-width: 811px) {
+    #page_sitemap {
+
+        #sitemap_posts {
+            margin-top: 64px;
+        }
+
+    }
+}

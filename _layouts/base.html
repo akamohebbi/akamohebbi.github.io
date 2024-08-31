@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa_IR" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% if page.title %}
+        <title>{{ page.title }} - {{ site.title }}</title>
+    {% else %}
+        <title>{{ site.title }} - {{ site.description }}</title>
+    {% endif %}
+
+    {% seo title=false %}
+
+    {% feed_meta %}
+
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="/js/functions.js"></script>
+    <script src="/js/head.js"></script>
+
+    {% if jekyll.environment == "production" and site.google_analytics %}
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', '{{ site.google_analytics }}');
+        </script>
+    {% endif %}
+</head>
+<body>
+
+    {{ content }}
+
+    <script src="/js/global.js"></script>
+</body>
+</html>

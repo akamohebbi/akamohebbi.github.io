@@ -1,0 +1,522 @@
+// ----------------------------------------------------------------
+// SCSS veriables -------------------------------------------------
+
+// font size
+$default_font_size: 16px;
+$small_font_size: .75rem;
+$large_font_size: 1.26rem;
+
+$article_heading_font_size: 3.375rem;
+$article_content_font_size: 1.125rem;
+
+// colors
+$theme_color: orange;
+$primary_text_color: black;
+$secondary_text_color: gray;
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------
+// HTML Elements --------------------------------------------------
+
+::selection {
+    color: white;
+    background-color: $theme_color;
+}
+::-moz-selection {
+    color: white;
+    background-color: $theme_color;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: $default_font_size;
+}
+
+body {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: normal;
+    color: $primary_text_color;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: $theme_color;
+
+    &:hover {
+        color: $secondary_text_color;
+    }
+}
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------
+// Wrapper --------------------------------------------------------
+
+.page-wrapper {
+    margin: 128 - 16px;
+    padding: 16px;
+}
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------
+// Header ---------------------------------------------------------
+
+.page-header {
+    margin-bottom: 128px;
+}
+
+// title div
+.header-title {
+    margin-bottom: 32px;
+
+    img {
+        width: 128px;
+        height: 128px;
+        border-radius: 100%;
+        border: 4px solid $secondary_text_color;
+        padding: 4px;
+        margin-bottom: 16px;
+    }
+
+    h2 {
+        line-height: 1;
+        margin: 0;
+        font-size: $default_font_size * 2.5;
+        font-weight: bold;
+    }
+
+    p {
+        margin: 0;
+        margin-top: 8px;
+        color: $secondary_text_color;
+    }
+}
+
+// page primary nav
+.page-primary-nav {
+    font-size: $large_font_size;
+    
+    a {
+        color: $theme_color;
+        text-decoration: none;
+
+        &:after {
+            content: '•';
+            margin: 8px;
+            color: $primary_text_color;
+            font-size: $small_font_size;
+
+            &:hover {
+                color: $secondary_text_color;
+                text-decoration: none;
+            }
+        }
+
+        &:last-child::after {
+            content: none;
+            margin: 0;
+        }
+
+        &:hover {
+            color: $primary_text_color;
+        }
+
+        &.active {
+            color: $primary_text_color;
+        }
+    }
+}
+
+
+
+
+
+
+
+// ----------------------------------------------------------------
+// Article --------------------------------------------------------
+
+.page-article {
+    margin-top: 128px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+// header div
+.article-header {
+    margin-bottom: 32px;
+}
+
+// thumbnail figure
+.article-thumbnail {
+    margin: 0;
+    margin-bottom: 16px;
+
+    img {
+        opacity: 1;
+        transition: all .3s;
+
+        &:hover {
+            opacity: .64;
+            transition: all .3s;
+        }
+    }
+
+    figcaption {
+        text-align: center;
+        margin-top: -8px;
+        font-size: $small_font_size;
+    }
+}
+
+// title h1
+.article-title {
+    font-size: $article_heading_font_size;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+
+// content div
+.article-content {
+    width: 920px;
+    max-width: 100%;
+    font-size: $article_content_font_size;
+
+    img {
+        max-width: 128%;
+    }
+
+    p {
+        code {
+            border: 1px solid #eee;
+            padding: 2px 8px;
+            margin: auto 4px;
+            background-color: #f9f9f9;
+            display: inline-block;
+            direction: ltr;
+        }
+    }
+
+    q,
+    blockquote {
+        border-right: 4px solid #000;
+        padding: 16px;
+        font-style: italic;
+        color: #a1a1a1;
+        font-size: 128%;
+    }
+
+    pre {
+        direction: ltr;
+        text-align: left;
+        border: 1px solid #eee;
+        padding: 16px;
+        background-color: #f9f9f9;
+        overflow-y: scroll;
+    }
+}
+
+// footer div
+.article-footer {
+    margin-top: 32px;
+}
+
+// tags div
+.article-tags {
+    .tag {
+        margin-left: 8px;
+        text-decoration: underline;
+        color: $secondary_text_color;
+
+        &::before {
+            content: '#';
+        }
+
+        &:last-child {
+            margin-left: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+// ----------------------------------------------------------------
+// comments -------------------------------------------------------
+
+.comments {
+    margin-top: 64px;
+    width: 920px;
+    max-width: 100%;
+
+    .load {
+        h2 {
+            margin: 0;
+            line-height: 1;
+        }
+
+        p {
+            margin: 0;
+            margin-top: 8px;
+            line-height: 1;
+            color: $secondary_text_color;
+        }
+    }
+}
+
+
+
+
+
+
+
+// ----------------------------------------------------------------
+// random posts ---------------------------------------------------
+
+.random_posts {
+    margin-top: 64px;
+
+    h2 {
+        margin: 0;
+        line-height: 1;
+    }
+
+    ul {
+        margin: 0;
+        margin-top: 16px;
+        margin-right: 48px;
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------
+// Footer ---------------------------------------------------------
+
+.page-footer {
+    margin-top: 128px;
+    text-align: left;
+}
+
+// links
+.footer-links {
+    font-size: $large_font_size;
+    
+    a {
+        color: $theme_color;
+        text-decoration: none;
+
+        &:after {
+            content: '•';
+            margin: 8px;
+            color: $primary_text_color;
+            font-size: $small_font_size;
+
+            &:hover {
+                color: $secondary_text_color;
+                text-decoration: none;
+            }
+        }
+
+        &:last-child::after {
+            content: none;
+            margin: 0;
+        }
+
+        &:hover {
+            color: $primary_text_color;
+        }
+    }
+}
+
+// copyrights
+.footer-copyrights {
+    font-size: $small_font_size;
+    color: $secondary_text_color;
+    margin-top: 16px;
+    
+    p {
+        margin: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------
+// Responsive -----------------------------------------------------
+
+@media (max-width: 1280px) {
+    .page-wrapper {
+        margin: 64px;
+    }
+
+    .page-header {
+        margin-bottom: 64px;
+    }
+
+    .header-title {
+        margin-bottom: 16px;
+        
+        .logo {
+            margin-bottom: 8px;
+        }
+    }
+
+    .page-article {
+        margin-top: 64px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .page-footer {
+        margin-top: 64px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @media (max-width: 1152px) {
+//     .header-title h2 {
+//         font-size: 3rem;
+//     }
+
+//     .header-title p {
+//         font-size: 1.5rem;
+//     }
+// }
+
+// @media (max-width: 939px) {
+//     .page-wrapper {
+//         margin: 64px;
+//     }
+    
+//     .article-header {
+//         margin-bottom: 16px;
+//     }
+
+//     .page-footer,
+//     .page-entry {
+//         // margin-top: 64px;
+//     }
+// }
+
+@media (max-width: 811px) {
+    .page-wrapper {
+        margin: 0;
+        padding: 16px;
+    }
+
+    .page-footer {
+        nav {
+            white-space: nowrap;
+            overflow-y: hidden;
+            overflow-x: scroll;
+        }
+
+        .footer-copyrights {
+            text-align: center;
+        }
+    }
+
+    .page-primary-nav {
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+
+    .header-title p {
+        font-size: 1.2rem;
+    }
+
+    .article-title {
+        font-size: 2.75rem;
+    }
+
+    .article-content {
+        max-width: 100%;
+        font-size: 1.25rem;
+
+        img {
+            max-width: 100% !important;
+        }
+    }
+}
+
+// @media (max-width: 715px) {
+//     .header-title h2 {
+//         font-size: 2.5rem;
+//     }
+
+//     // .header-title p {
+//     //     font-size: 1.25rem;
+//     // }
+// }

@@ -1,0 +1,17 @@
+    </div> <!-- END page-entry -->
+
+    <footer class="page-footer">
+        <nav class="footer-links">
+            {% for item in site.data.menus.social %}
+                <a href="{{ item.url }}" target="_blank">{{ item.title }}</a>
+            {% endfor %}
+        </nav>
+
+        <div class="footer-copyrights">
+            <p>تمامی محتوای منتشر شده در <a href="https://akamohebbi.ir/">وبلاگ آکام</a> تحت مجوز <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC</a> منتشر می شود
+                <br>
+                وبلاگ آکام یک پروژه متن باز و آزاد می باشد و سورس کد آن از <a href="https://github.com/akamohebbi/akamohebbi.github.io" target="_blank">مخزن گیت هاب</a> آن قابل دسترسی می باشد</p>
+        </div>
+    </footer>
+
+</div> <!-- END page-wrapper -->

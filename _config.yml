@@ -1,0 +1,45 @@
+url: https://akamohebbi.ir
+
+# language
+lang: fa_IR
+
+# direction: ltr, rtl
+dir: rtl
+
+charset: UTF-8
+
+title: "آکام محبی"
+description: "وبلاگ آکام، دست نوشته های یک گیک"
+
+
+exclude:
+    - CNAME
+    - LICENSE
+    - README.md
+
+# primary nav menu
+primary_menu: primary
+
+permalink: /:year/:month/:slug/
+
+excerpt_separator: '<div id="read-more"></div>'
+
+google_analytics: G-0NZF4DBHKN
+
+disqus_shortname: akamohebbi
+disqus_language: fa
+
+collections:
+    assets:
+        output: true
+        permalink: /:path
+    pages:
+        output: true
+        permalink: /:slug/
+
+plugins: 
+    - jemoji
+    - jekyll-seo-tag
+    - jekyll-sitemap
+    - jekyll-feed
+    - jekyll-paginate

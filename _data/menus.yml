@@ -1,0 +1,43 @@
+primary:
+    -
+        title: صفحه اصلی
+        url: '/'
+    -
+        title: پروژه ها
+        url: /projects/
+    -
+        title: تماس و درباره آکام
+        url: /akamohebbi/
+    -
+        title: نقشه سایت
+        url: /sitemap/
+
+
+social:
+    -
+        title: ایمیل
+        url: mailto:akamohebbi@gmail.com
+    -
+        title: توییتر
+        url: https://twitter.com/akamohebbi
+    -
+        title: اینستاگرام
+        url: https://instagram.com/akamohebbi
+    -
+        title: گیت‌هاب
+        url: https://github.com/akamohebbi
+    -
+        title: یوتیوب
+        url: https://www.youtube.com/channel/UCTuL4vdN5OsGq_NvtO3HmXg
+    -
+        title: آپارات
+        url: https://aparat.com/akamohebbi
+    -
+        title: گروه تلگرام لینوکس ۹۸
+        url: https://t.me/linux98ir
+    -
+        title: کانال تلگرام لینوکس ۹۸
+        url: https://t.me/linux98dotir
+    -
+        title: گوگل درایو
+        url: https://drive.google.com/open?id=1p_jOlA5UAWy_fpyDgcv2H2hqAIOql0Hq&authuser=akamohebbi%40gmail.com&usp=drive_fs

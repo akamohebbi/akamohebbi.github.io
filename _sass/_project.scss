@@ -1,0 +1,25 @@
+#project_page {
+    #project_thumbnail {
+        margin-bottom: 64px;
+    }
+
+    .posts_related_to_this_project {
+        margin-top: 128px;
+    }
+}
+
+
+
+
+
+@media (max-width: 811px) {
+    #project_page {
+        #project_thumbnail {
+            margin-bottom: 32px;
+        }
+    
+        .posts_related_to_this_project {
+            margin-top: 64px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<div class="page-wrapper">
+
+    <header class="page-header">
+        <div class="header-title">
+            <img src="/img/avatar.jpeg" alt="" class="logo">
+            <h2>سلام، من آکام محبی هستم!</h2>
+            <p>مهندس نرم افزار، برنامه نویس، گیک لینوکسی و گاهی هکر و بلاگر 🤓</p>
+        </div>
+
+        <nav class="page-primary-nav">
+            {% for item in site.data.menus[site.primary_menu] %}
+                <a href="{{ item.url }}" class="{% if item.url == page.url %} active{% endif %}">{{ item.title }}</a>
+            {% endfor %}
+        </nav>
+    </header>
+
+
+
+    <div class="page-entry">
