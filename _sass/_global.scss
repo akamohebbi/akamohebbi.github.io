@@ -12,7 +12,7 @@ $article_content_font_size: 1.125rem;
 // colors
 $theme_color: orange;
 $primary_text_color: black;
-$secondary_text_color: gray;
+$secondary_text_color: #a1a1a1;
 
 
 
@@ -384,6 +384,31 @@ a {
 
 
 
+// ----------------------------------------------------------------
+// Page 404 -------------------------------------------------------
+
+.page-404 {
+    text-align: center;
+
+    h1 {
+        font-size: 20rem;
+        margin: 0;
+        line-height: 1;
+        color: $secondary_text_color;
+    }
+
+    p {
+        font-size: $large_font_size;
+        margin: 0;
+    }
+}
+
+
+
+
+
+
+
 
 
 
@@ -493,11 +518,20 @@ a {
         overflow-x: scroll;
     }
 
-    .header-title p {
-        font-size: 1.2rem;
+    .header-title img {
+        width: 64px;
+        height: 64px;
     }
 
-    .article-title {
+    .header-title h2 {
+        font-size: 2rem;
+    }
+
+    .header-title p {
+        font-size: $default_font_size;
+    }
+
+    .article-title h1 {
         font-size: 2.75rem;
     }
 
@@ -507,6 +541,16 @@ a {
 
         img {
             max-width: 100% !important;
+        }
+    }
+
+    .page-404 {
+        h1 {
+            font-size: 10rem;
+        }
+
+        p {
+            font-size: $default_font_size;
         }
     }
 }
