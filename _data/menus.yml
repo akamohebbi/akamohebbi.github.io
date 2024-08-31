@@ -3,9 +3,6 @@ primary:
         title: صفحه اصلی
         url: '/'
     -
-        title: پروژه ها
-        url: /projects/
-    -
         title: تماس و درباره آکام
         url: /akamohebbi/
     -
@@ -28,16 +25,10 @@ social:
         url: https://github.com/akamohebbi
     -
         title: یوتیوب
-        url: https://www.youtube.com/channel/UCTuL4vdN5OsGq_NvtO3HmXg
+        url: https://www.youtube.com/@akamohebbi
     -
-        title: آپارات
-        url: https://aparat.com/akamohebbi
-    -
-        title: گروه تلگرام لینوکس ۹۸
-        url: https://t.me/linux98ir
-    -
-        title: کانال تلگرام لینوکس ۹۸
-        url: https://t.me/linux98dotir
+        title: تلگرام
+        url: https://t.me/akamohebbi
     -
         title: گوگل درایو
         url: https://drive.google.com/open?id=1p_jOlA5UAWy_fpyDgcv2H2hqAIOql0Hq&authuser=akamohebbi%40gmail.com&usp=drive_fs
